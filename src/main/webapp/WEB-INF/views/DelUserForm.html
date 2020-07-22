@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/">
+
+<HEAD>
+    <TITLE>Удаление информации</TITLE>
+    <style>
+.div1 {display:inline-block;
+}
+.textStyle1 {
+	margin-top: 2%;
+   }
+.textStyle2 {
+    margin-top: 3%;
+   }
+.textStyle3 {
+	margin-top: 2%;
+   }
+.buttonStyle1 {
+	margin-top: 3%;
+}
+
+</style>
+</HEAD>
+<BODY>
+
+<!-- Реализация формы с сервером реализованным на java -->
+<form action = "/delUser" method = "post">
+
+
+    <center>
+        <div class="textStyle1">
+            <font size="5" color="black">
+                <b>Удаление пользователей</b>
+            </font>
+        </div>
+
+        <font size="6" color = "Black" th:color="${Color}">
+            <p th:utext="${Err}"></p>
+        </font>
+        <!-- Реализация поля "логин" -->
+        <div class="textStyle2">
+            <font size="3" color="black">
+                <b>Логин пользователя</b>
+            </font>
+            <div>
+                <input type = text size = "20" NAME="login"‌>
+            </div>
+        </div>
+
+
+        <div class = "buttonStyle1">
+            <input type = submit name = buttonOrder VALUE = "Удалить">
+        </div>
+
+        <div class = "textStyle2">
+            <font size="5" color="Red">
+                <a href="/Home">Вернуться к панели инструментов</a>
+            </font>
+        </div>
+    </center>
+</form>
+</div>
+
+</BODY>
+</HTML>
